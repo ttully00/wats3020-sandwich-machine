@@ -10,9 +10,9 @@ let breadOrder = prompt('what kind of bread would you like? (white, wheat, or fl
 
 let meatOrder = prompt('What kind of meat would you like? (Seperate multiple meats with a comma)','Turkey');
 
-let toppingsOrder = prompt('What topping would you like? (Seperate multiple toppings with a comma)','Pickles');
+let toppingsOrder = prompt('What toppings would you like? (Seperate multiple toppings with a comma)','Pickles');
 
-let condimentOrder = prompt('what condiments would you like? (Seperate multiple condiments with a comma)','Mustard');
+let condimentOrder = prompt('what condiments would you like? (Seperate multiple condiments with a comma)','ketchup');
 
 // Step 2 
 // Set Prices
@@ -25,7 +25,7 @@ let condimentOrder = prompt('what condiments would you like? (Seperate multiple 
 let prices = {
     sandwich: 5, 
     meat: 1, 
-    topping: 0.50, 
+    toppings: 0.50, 
     condiment: 0.25, 
 };
 
@@ -34,15 +34,18 @@ let toppingArray = toppingsOrder.split(',');
 let condimentArray = condimentOrder.split(',');
 
 let meatCost = meatArray.length = prices.meat;
-let toppingCost = toppingArray.length = prices.toppings;
-let condimentCost = condimentArray.length = prices.condiment;
+let toppingsCount = toppingArray.length; 
+let toppingCost = toppingsCount = prices.toppings;
+let condimentCount = condimentArray.length;
+let condimentCost = condimentCount = prices.condiment;
+
 
 let subtotal = prices.sandwich + meatCost + toppingCost + condimentCost;
 
 let waStateTaxRate = 0.065;
 let orderTax = subtotal * waStateTaxRate;
 
-let totalPrice = subtotal + Tax;
+let totalPrice = subtotal + orderTax;
 
 // Step 3
 // Fill out template: Expression tags
@@ -61,7 +64,7 @@ let receiptTemplate = `
     <p class="text-right">Condiments: $${condimentCost.toFixed(2)}</p>
     <p class="text-right">--------</p>
     <p class="text-right">Subtotal: $${subtotal.toFixed(2)}</p>
-    <p class="text-right">Tax: $${tax.toFixed(2)}</p>
+    <p class="text-right">Tax: $${orderTax.toFixed(2)}</p>
     <p class="text-right">--------</p>
     <p class="text-right">Total: $${totalPrice.toFixed(2)}</p>
 `
