@@ -10,7 +10,7 @@ let breadOrder = prompt('what kind of bread would you like? (white, wheat, or fl
 
 let meatOrder = prompt('What kind of meat would you like? (Seperate multiple meats with a comma)','Turkey');
 
-let toppingsOrder = prompt('What topping would you like? (Seperate multiple toppings with a comma)','lettuce');
+let toppingsOrder = prompt('What topping would you like? (Seperate multiple toppings with a comma)','Pickles');
 
 let condimentOrder = prompt('what condiments would you like? (Seperate multiple condiments with a comma)','Mustard');
 
